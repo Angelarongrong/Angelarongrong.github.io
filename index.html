@@ -71,95 +71,39 @@
     <article id="post-setup" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/05/20/setup/" class="article-date">
-  <time datetime="2017-05-19T18:51:19.104Z" itemprop="datePublished">2017-05-20</time>
+  <time datetime="2017-05-19T19:00:47.000Z" itemprop="datePublished">2017-05-20</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/20/setup/">我的Hexo博客搭建记录</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><pre><code>5月20日，这是一个特别的周六（狗粮特别多？）——自己搭建的博客终于成功上传github啦（虽然现在看就是个特别朴素的原始部落嗡）。
-第一次跟着老师和学长们做简单的编程项目（并希望能一步步被推向深坑）。在此之前，先搭建了个属于自己的blog。然后这是第一篇除了实验报告之外的技术性文档，大致地记录了一下这个blog的搭建过程。虽然个人觉得一路看教程、问搜索引擎、问学长而搭起来的blog并没有多少技术含量可言，但也算是一个小小的进步吧。
-希望以后会是一个能自己解决问题的好孩子啊~
-</code></pre><h1 id="技术参考"><a href="#技术参考" class="headerlink" title="技术参考"></a>技术参考</h1><p><a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">hexo官方的建站教程</a><br><a href="http://xuxping.com/2016/07/21/blog-install/#more" target="_blank" rel="external">许小平学长博客上的建站教程</a><br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">来源于网络的Chillax’s Blog的建站教程</a><br>在此感谢许小平学长耐心的解答，解决了我百思不得其解的（不曾注意的就是没法发现的zz）问题。<br>感谢小汤同学在建站过程中一直和我交流经验，共享资源。</p>
-<h1 id="建站过程"><a href="#建站过程" class="headerlink" title="建站过程"></a>建站过程</h1><h2 id="安装所需应用程序及插件："><a href="#安装所需应用程序及插件：" class="headerlink" title="安装所需应用程序及插件："></a>安装所需应用程序及插件：</h2><p>这里我参考的是官网的建站教程，里面提供了应用程序的下载地址。所需的应用程序有：</p>
-<ul>
-<li><strong>Node.js</strong>（据说安装后需要重启电脑，否则可能提示无效命令）</li>
-<li><strong>Git</strong><br>安装之后在任意地方右键会出现<strong>Git Bash</strong>选项，选择然后使用以下命令<strong>安装hexo</strong>：</li>
-</ul>
-<blockquote>
-<p>$ npm install hexo-cli -g</p>
-</blockquote>
-<p><strong>安装插件</strong>：</p>
-<blockquote>
-<p>npm install hexo-renderer-jade –save<br>npm install hexo-renderer-sass –save<br>npm install hexo-deployer-git –save</p>
-</blockquote>
-<p>这一步在官网的教程中并未提到，但是却是不可或缺。这也正是我纠结了两个晚上愣是没法把blog上传成功的原因。讲道理，一定要安装啊，特别是第三个！各种各样的迷之错误已经让我无比绝望了QAQ<br><img src="/images/2ae15584e730afb.jpg" alt="Alt text"></p>
-<h3 id="开始建站啦"><a href="#开始建站啦" class="headerlink" title="开始建站啦"></a>开始建站啦</h3><p>首先要创建一个放置blog文件的文件夹。<br>在一个合适（喜欢）的位置创建一个文件夹，起一个好听（喜欢）的英文名。然后进入文件夹，右键选择Git Bash，执行下列命令：</p>
-<blockquote>
-<p>$ hexo init<br>$ npm install</p>
-</blockquote>
-<p>然后会发现这个文件夹里已经搭建好了blog所需的所有文件。<br>目录是这样的：<br><img src="/images/2.png" alt="Alt text"><br>此时在文件夹内执行下列命令：</p>
-<blockquote>
-<p>$ hexo g     </p>
-</blockquote>
-<p>其完整命令为hexo generate，用于生成静态文件</p>
-<blockquote>
-<p>$ hexo s</p>
-</blockquote>
-<p>其完整命令为hexo server，用于启动服务器，主要用于本地预览<br>此时用浏览器访问<strong><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></strong>，可以本地预览到blog啦~</p>
-<h4 id="配置-config-yml文件"><a href="#配置-config-yml文件" class="headerlink" title="配置_config.yml文件"></a>配置_config.yml文件</h4><p><strong>#每一个冒号后面都需要空出一个空格</strong><br><strong>#感觉这一步在建立了仓库之后做会比较好</strong><br>文件名上右键选择合适的打开方式比如<strong>edit with notepad++</strong><br>许多配置目前均用默认值，需要配置的地方不多，比如：<br><img src="/images/5.png" alt="Alt text"><br>timezone留白即使用电脑所用的时区。<br><img src="/images/6.png" alt="Alt text"><br>feed那一栏是教程里博主自行添加的，具体什么作用不造，但是目前没看出影响orz<br><strong>重点在于deploy中自行添加的两行东西。repository的url可以在github页面copy也可以按照图中格式自行添加。</strong></p>
-<p>####部署到Github上</p>
-<p>先生成静态文件</p>
-<blockquote>
-<p>$ hexo g</p>
-<p>$ hexo d</p>
-</blockquote>
-<p>hexo d完整命令为hexo deploy，用于将本地文件发布到github上。<br>命令成功执行之后可以在仓库中看到上传的所有blog的文件。大约几分钟后可以在浏览器访问<strong>github用户名.github.io</strong>，无误的话能看到自己的博客。</p>
-<p>这一步还有另一种做法，需要配置SSH，由于操作时（可能是插件原因）出错了，没有最终完成（但大部分操作都成功了）在<strong>技术参考</strong>的第三个链接里有十分详细的操作过程。个人整理如下：</p>
-<blockquote>
-<p><strong>配置代码：</strong><br>   type: git<br>   repository: git@github.com:Angelarongrong/Angelarongrong.github.io.git<br>   branch: master</p>
-<p><strong>配置SSH：</strong><br>   $ ssh-keygen -t rsa -C “Github注册时的邮箱”</p>
-</blockquote>
-<p>之后会要求确认路径与输入密码，可默认一路回车。然后在<strong>C:\Users\Administrator</strong>下若找到<strong>.ssh</strong>文件夹则表示成功了。以文本形式打开文件夹中的<strong>id_rsa.pub</strong>，复制里面的全部内容，回到github页面，点击右上角图标在下拉菜单中选择Settings&gt;SSH and GPG Keys&gt;New SSH Key.title任意填写，将复制的内容粘贴到key中保存。为了验证是否成功，在git bash中输入：</p>
-<blockquote>
-<p>$ ssh -T git@github.com</p>
-</blockquote>
-<p>第一次输入会有提示，输入yes如果看到以下内容则成功连上了github：<br><img src="./7.png" alt="Alt text"><br>在上传本地文件之前还需要设置username和email：</p>
-<blockquote>
-<p>$ git config –global user.name “github用户名”</p>
-<p>$ git config –global user.email “github注册邮箱”</p>
-</blockquote>
-<p>（其实并不知道这两步有没有起作用）<br>接着有如下步骤（中间按回车就可以），据说设置完之后使用<strong>hexo d</strong>命令发布内容就不需要输入密码了<br><img src="/images/8.png" alt="Alt text"></p>
-<p>###注册Github账号<br>用户名、邮箱、密码需要做好记录。</p>
-<p>####创建repository<br>这是一个相当于仓库的、用于放置blog文件的地方。登录进入Github后想方设法找到一个new repositories的按钮。比如可以这样：<br><img src="/images/3.png" alt="Alt text"><br>选择start a project<br>进入这样子的页面<br><img src="/images/4.png" alt="Alt text"><br>只需要填写repository name，然后须十分注意它的格式：</p>
-<blockquote>
-<p><strong>github用户名.github.io</strong></p>
-</blockquote>
-<p>我的用户名是<strong>Angelarongrong</strong>，所以我的仓库名叫<strong>Angelarongrong.github.io</strong><br>点<strong>create</strong>就完成啦</p>
-<h3 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h3><p>不知道是不是一定要在source&gt;_posts中右键git bash才能成功执行命令，总之在别的地方git bash，.md文件都没有成功生成。如果有人看这篇东西，恰好遇到同样问题，不妨一试。</p>
-<blockquote>
-<p>$ hexo new “my new post”</p>
-</blockquote>
-<p>随后用记事本或者npp在文件夹中打开生成的文件。正文使用markdown语法格式书写。<br>这是我十分伪抒情的第一篇文章。<br><img src="/images/9.png" alt="Alt text"></p>
-<p>完成后用<strong>$ hexo g</strong>生成静态文件，用<strong>hexo s</strong>在本地预览效果。感觉没问题了，用<strong>hexo d</strong>同步到github。就可以用浏览器访问啦~<br>（中途get许多markdown小语法）<br>（马克飞象界面真的很美好吗）<br><img src="/images/10.png" alt="Alt text"></p>
-<p>删除文章：</p>
-<ul>
-<li>在_posts文件夹中先将源文件删除</li>
-<li>执行命令：$ hexo clean (清除缓存db.json和已经生成的静态文件public)</li>
-<li>执行命令： $ hexo g<br>刷新页面~</li>
-</ul>
-<p>在许小平学长博客中还分享了关于处理文章中用到的图片的存储问题以及域名的添加。打算留到下次成功把blog主题给改了、添加个人资料等内容、新增功能之后一起做个总结。</p>
-<p>啊终于结束了。开心。<br><img src="/images/29cc7e83b84738cb.jpg" alt="Alt text"></p>
-
+        <p>像实验报告一样的记录……<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/05/20/setup/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/20/setup/" data-id="cj2w7h77w0002ogv6g7ubofy2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/20/setup/" data-id="cj2x1039e000298v6fww44uyz" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/skills/">skills</a></li></ul>
+
     </footer>
   </div>
   
@@ -198,7 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/19/my-new-post/" data-id="cj2w7h77t0001ogv6ic909wbq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/19/my-new-post/" data-id="cj2x1038v000198v63s9nq95p" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
@@ -245,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/18/hello-world/" data-id="cj2w7h77o0000ogv6oz2a8r2b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/18/hello-world/" data-id="cj2x1038v000098v6w142vw8o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -267,7 +211,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/skills/">skills</a></li></ul>
     </div>
   </div>
 
@@ -277,7 +221,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/blog/" style="font-size: 10px;">blog</a>
+      <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a>
     </div>
   </div>
 
@@ -299,7 +243,7 @@
       <ul>
         
           <li>
-            <a href="/2017/05/20/setup/">(no title)</a>
+            <a href="/2017/05/20/setup/">我的Hexo博客搭建记录</a>
           </li>
         
           <li>
